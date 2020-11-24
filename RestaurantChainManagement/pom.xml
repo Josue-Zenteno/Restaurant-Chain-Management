@@ -5,7 +5,7 @@
   <groupId>A01</groupId>
   <artifactId>RestaurantChainManagement</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
 
   <name>RestaurantChainManagement</name>
   <url>http://maven.apache.org</url>
