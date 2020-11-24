@@ -61,6 +61,10 @@ public class Transaction {
 	public String toString() {
 		return "Transaction in table "+this.table.getId()+" with time "+this.getTime();
 	}
+	
+	public int insert() {
+		return transactionDAO.insert(this);
+	}
 
 }
 

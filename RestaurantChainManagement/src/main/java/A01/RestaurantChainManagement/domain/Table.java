@@ -50,7 +50,7 @@ public class Table {
 		Transaction t = new Transaction(time,this.id);
 		TransactionList[this.state] = t;
 		
-		return t.getTransactionDAO().insert(t);
+		return t.insert();
 	}
 
 	public TableDAO getTableDAO() {

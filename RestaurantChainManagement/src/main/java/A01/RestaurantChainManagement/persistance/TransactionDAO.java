@@ -5,9 +5,9 @@ import A01.RestaurantChainManagement.domain.Transaction;
 
 public class TransactionDAO {
 	private Vector<Transaction> transactionList;
-	
+
 	public TransactionDAO() {
-		transactionList = new Vector<Transaction>();
+		setTransactionList(new Vector<Transaction>());
 	}
 
 	public int insert(Transaction t) {	
@@ -37,5 +37,13 @@ public class TransactionDAO {
 	
 	public Vector<Transaction> getTransactionList() {
 		return transactionList;
+	}
+	
+	public void setTransactionList(Vector<Transaction> transactionList) {
+		try {
+			this.transactionList = transactionList;
+		} catch (Exception e) {
+			throw e;
+		}
 	}
 }
