@@ -78,9 +78,8 @@ public class MainMenu {
 						case 2:
 							ManagerEmployee.getTakeCommandStats();
 							ManagerEmployee.getMealPreparationStats();
-							//TODO in future iterations
-							//ManagerEmployee.getDeliveryNoteStats();  
-							//ManagerEmployee.getPreparationStats();
+							//ManagerEmployee.getDeliveryNoteStats();  Activate in future iterations
+							//ManagerEmployee.getPreparationStats();   Activate in future iterations
 							break;
 						case 0:
 							System.out.println("You have logged out as Table Waiter correctly\n");

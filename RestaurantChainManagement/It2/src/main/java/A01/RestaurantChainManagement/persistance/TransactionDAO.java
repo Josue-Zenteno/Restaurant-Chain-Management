@@ -72,6 +72,38 @@ public class TransactionDAO {
 		return preparationTimes;
 	}
 	
+	public Vector<Integer> getDeliveryNoteStats(){ //Iteration2
+		Vector<Integer> deliveryNoteTimes = new Vector<Integer>();
+		Vector<Vector<Object>> dbVector = new Vector<Vector<Object>>();
+
+		try {
+			dbVector = Broker.getAgente().leer("SELECT Time FROM A01dbservice.Transaction WHERE State = 6;");
+		}catch(Exception e) {
+			System.err.println(e.getMessage());
+		}
+
+		for(int i=0; i<dbVector.size(); i++) {
+			deliveryNoteTimes.add((Integer) dbVector.elementAt(i).elementAt(0));
+		}
+		return deliveryNoteTimes;
+	}
+
+	public Vector<Integer> getPreparationStats(){ //Iteration2
+		Vector<Integer> preparationTimes = new Vector<Integer>();
+		Vector<Vector<Object>> dbVector = new Vector<Vector<Object>>();
+
+		try {
+			dbVector = Broker.getAgente().leer("SELECT Time FROM A01dbservice.Transaction WHERE State = 8;");
+		}catch(Exception e) {
+			System.err.println(e.getMessage());
+		}
+
+		for(int i=0; i<dbVector.size(); i++) {
+			preparationTimes.add((Integer) dbVector.elementAt(i).elementAt(0));
+		}
+		return preparationTimes;
+	}
+	
 	/*******************Auxiliary functions********************/
 	public Vector<Transaction> getTransactionList() {
 		return transactionList;

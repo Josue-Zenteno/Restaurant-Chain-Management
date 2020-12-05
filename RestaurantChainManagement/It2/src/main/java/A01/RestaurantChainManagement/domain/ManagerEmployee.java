@@ -26,13 +26,23 @@ public class ManagerEmployee {
 			c.prepareMeal();
 		}
 		
-		public static void getTakeCommandStats() {
+		public static void getTakeCommandStats() { //Iteration2
 			TableWaiter tw = new TableWaiter();
 			tw.getTakeCommandStats();
 		}
 		
-		public static void getMealPreparationStats() {
+		public static void getMealPreparationStats() { //Iteration2
 			TableWaiter tw = new TableWaiter();
 			tw.getMealPreparationStats();
+		}
+		
+		public static void getDeliveryNoteStats() { //Iteration2
+			TableWaiter tw = new TableWaiter();
+			tw.getDeliveryNoteStats();
+		}
+
+		public static void getPreparationStats() { //Iteration2
+			TableWaiter tw = new TableWaiter();
+			tw.getPreparationStats();
 		}
 	}

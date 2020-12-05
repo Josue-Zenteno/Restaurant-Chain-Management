@@ -55,6 +55,32 @@ public class Transaction {
 		}
 	}
 	
+	public double getDeliveryNoteStats() { //Iteration2
+		Vector<Integer> deliveryNoteTimes = getTransactionDAO().getDeliveryNoteStats();
+		if(deliveryNoteTimes.size() != 0) {
+			int totalTime = 0;
+			for(int time : deliveryNoteTimes) {
+				totalTime += time;
+			}
+			return (totalTime/deliveryNoteTimes.size());
+		}else {
+			return 0.0;
+		}
+	}
+
+	public double getPreparationStats() { //Iteration2
+		Vector<Integer> preparationTimes = getTransactionDAO().getPreparationStats();
+		if(preparationTimes.size() != 0) {
+			int totalTime = 0;
+			for(int time : preparationTimes) {
+				totalTime += time;
+			}
+			return (totalTime/preparationTimes.size());
+		}else{
+			return 0.0;
+		}
+	}
+	
 	/*******************Auxiliary functions********************/
 	public int getTime() {
 		return time;

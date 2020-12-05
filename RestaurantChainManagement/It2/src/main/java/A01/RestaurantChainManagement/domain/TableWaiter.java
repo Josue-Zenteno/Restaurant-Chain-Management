@@ -80,6 +80,16 @@ public class TableWaiter extends Waiter {//Iteration2
 		System.out.println("The average time of preparation in this restaurant is: "+tr.getMealPreparationStats());
 	}
 	
+	public void getDeliveryNoteStats() {
+		Transaction tr = new Transaction();
+		System.out.println("The average time of delivering a note in this restaurant is: "+tr.getDeliveryNoteStats());
+	}
+
+	public void getPreparationStats() {
+		Transaction tr = new Transaction();
+		System.out.println("The average time of table preparation in this restaurant is: "+tr.getPreparationStats());
+	}
+	
 	/*******************Auxiliary functions********************/
 	public void advanceState(int tableID, int maxStateTime) {
 		Random r = new Random();
