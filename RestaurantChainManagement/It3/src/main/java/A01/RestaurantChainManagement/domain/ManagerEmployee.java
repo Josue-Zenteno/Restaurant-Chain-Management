@@ -21,9 +21,9 @@ public class ManagerEmployee {
 			tw.makeOrder();
 		}
 	
-		public static void prepareMeal() { //Iteration2
+		public static int prepareMeal() { //Iteration2 with extras of iteration3
 			Cooker c = new Cooker();
-			c.prepareMeal();
+			return c.prepareMeal();
 		}
 		
 		public static void getTakeCommandStats() { //Iteration2

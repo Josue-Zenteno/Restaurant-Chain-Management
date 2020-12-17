@@ -88,7 +88,7 @@ public class MainMenu {
 				}while (option != 0);
 				break;
 				
-			case 3: //Iteration2
+			case 3: //Iteration2 with extras of iteration3
 				do {
 					System.out.println("\nYou have logged as a Cooker\n"
 							+ "\n Select one option:"
@@ -97,7 +97,8 @@ public class MainMenu {
 					option = readOption(0, 1);
 					switch (option) {
 					case 1:
-						ManagerEmployee.prepareMeal();
+						if(ManagerEmployee.prepareMeal()==-1) System.out.println("The cooker has not a dish to cook\n");
+						else System.out.println("The dish was prepared correctly\n");
 						break;
 					case 0:
 						System.out.println("You have logged out as Cooker correctly\n");
