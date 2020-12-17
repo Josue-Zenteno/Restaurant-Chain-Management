@@ -13,6 +13,7 @@ public class Cooker {
 	/************************Constructor***********************/
 	public Cooker() {
 		dishToPrepare = null;
+		ingredientDAO = new IngredientDAO();
 	}
 	
 	/**********************Main functions**********************/
@@ -37,6 +38,7 @@ public class Cooker {
 	public void makeForecast() {//Iteration3
 		Dish d = new Dish();
 		Dish[] dishes = d.getDishes();
+		System.out.println("hola1");
 		ingredientDAO.readAllIngredientsNames();
 		String[] ingredients = ingredientDAO.getIngredientsList().toArray(new String[ingredientDAO.getIngredientsList().size()]);
 		int[] quantities =  new int [ingredients.length];
