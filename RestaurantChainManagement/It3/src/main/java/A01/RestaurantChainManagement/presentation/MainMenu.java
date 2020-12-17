@@ -95,7 +95,7 @@ public class MainMenu {
 							+ "\n [Option 1] Notify that meal is prepared"
 							+ "\n [Option 2] Make forecast"
 							+ "\n [Option 0] Exit");
-					option = readOption(0, 1);
+					option = readOption(0, 2);
 					switch (option) {
 					case 1:
 						if(ManagerEmployee.prepareMeal()==-1) System.out.println("The cooker has not a dish to cook\n");
