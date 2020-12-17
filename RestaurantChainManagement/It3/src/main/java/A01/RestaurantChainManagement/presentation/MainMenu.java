@@ -93,6 +93,7 @@ public class MainMenu {
 					System.out.println("\nYou have logged as a Cooker\n"
 							+ "\n Select one option:"
 							+ "\n [Option 1] Notify that meal is prepared"
+							+ "\n [Option 2] Make forecast"
 							+ "\n [Option 0] Exit");
 					option = readOption(0, 1);
 					switch (option) {
@@ -100,6 +101,8 @@ public class MainMenu {
 						if(ManagerEmployee.prepareMeal()==-1) System.out.println("The cooker has not a dish to cook\n");
 						else System.out.println("The dish was prepared correctly\n");
 						break;
+					case 2:
+						ManagerEmployee.makeForecast();
 					case 0:
 						System.out.println("You have logged out as Cooker correctly\n");
 					}

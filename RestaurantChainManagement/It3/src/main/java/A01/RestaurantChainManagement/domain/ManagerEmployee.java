@@ -26,6 +26,11 @@ public class ManagerEmployee {
 			return c.prepareMeal();
 		}
 		
+		public static void makeForecast() {
+			Cooker c = new Cooker();
+			c.makeForecast();
+		}
+		
 		public static void getTakeCommandStats() { //Iteration2
 			TableWaiter tw = new TableWaiter();
 			tw.getTakeCommandStats();
