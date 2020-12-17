@@ -38,7 +38,7 @@ public class TableWaiter extends Waiter {//Iteration2
 		}
 	}
 	
-	public void makeOrder() {
+	public Dish makeOrder() {
 		Vector<Integer> askingTables = getAskingTables();
 		
 		if(askingTables.size() != 0) {
@@ -60,7 +60,7 @@ public class TableWaiter extends Waiter {//Iteration2
 				Dish orderDish = askForDish(menu);
 				if(tryToMakeAnOrder(availableIngredients, orderDish)) {
 					advanceState(askingTables.elementAt(selectedTable), 15);
-					break;
+					return orderDish;
 				}else {
 					System.out.println("\nSorry there are not enough ingredients to prepare: "+orderDish.getName());
 				}
@@ -68,6 +68,7 @@ public class TableWaiter extends Waiter {//Iteration2
 		}else {
 			System.out.println("There are not Asking Tables to take a command");
 		}
+		return null;
 	}
 	
 	public void getTakeCommandStats() {

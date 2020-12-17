@@ -38,7 +38,6 @@ public class Cooker {
 	public void makeForecast() {//Iteration3
 		Dish d = new Dish();
 		Dish[] dishes = d.getDishes();
-		System.out.println("hola1");
 		ingredientDAO.readAllIngredientsNames();
 		String[] ingredients = ingredientDAO.getIngredientsList().toArray(new String[ingredientDAO.getIngredientsList().size()]);
 		int[] quantities =  new int [ingredients.length];
@@ -48,7 +47,8 @@ public class Cooker {
 		for(int i=0;i<dishes.length;i++)
 			for(int k=0;k<10;k++)
 				for(String ingredient:dishes[i].getIngredients())
-					quantities[correspondency.get(ingredient)]++;
+					quantities[correspondency.get(ingredient.trim())]++;
+
 		ingredientDAO.updateIngredients(ingredients,quantities);
 	}
 	public void setDish(Dish dish) {//Iteration3

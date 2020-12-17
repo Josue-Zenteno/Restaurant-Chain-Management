@@ -19,6 +19,7 @@ public class Dish {//Iteration2
 	public Dish(String name) {
 		setName(name);
 		setDishDAO(new DishDAO());
+		Ingredients= new String[5];
 	}
 	
 	/**********************Main functions**********************/
@@ -67,7 +68,7 @@ public class Dish {//Iteration2
 	}
 
 	public void setIngredients(String[] ingredients) {
-		Ingredients = ingredients;
+		for(int i=0; i<5;i++) Ingredients[i]=ingredients[i];
 	}
 	
 	public DishDAO getDishDAO() {

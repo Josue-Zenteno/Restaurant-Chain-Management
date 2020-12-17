@@ -1,6 +1,7 @@
 package A01.RestaurantChainManagement.domain;
 
 public class ManagerEmployee {
+		private static Dish dishToPrepare;
 	
 		/**********************Main functions**********************/
 		public static String[] checkAvailableTables() { //ITeration1
@@ -18,11 +19,12 @@ public class ManagerEmployee {
 		
 		public static void makeOrder(){ //Iteration2
 			TableWaiter tw = new TableWaiter();
-			tw.makeOrder();
+			dishToPrepare=tw.makeOrder();
 		}
 	
 		public static int prepareMeal() { //Iteration2 with extras of iteration3
 			Cooker c = new Cooker();
+			c.setDish(dishToPrepare);
 			return c.prepareMeal();
 		}
 		

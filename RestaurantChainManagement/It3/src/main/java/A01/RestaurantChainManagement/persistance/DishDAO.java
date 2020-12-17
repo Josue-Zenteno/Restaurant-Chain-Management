@@ -50,17 +50,16 @@ public class DishDAO {//Iteration2
 		}catch(Exception e) {
 			System.err.println(e.getMessage());
 		}
-		
+		String[] ingredients = new String[5];
 		for(int i=0; i<dbVector.size(); i++) {
 			Dish dish = new Dish((String)dbVector.elementAt(i).elementAt(0));
-			String[] ingredients = new String[5];
 			for(int j=0; j<ingredients.length; j++) {
-				ingredients[i] = (String) dbVector.elementAt(i).elementAt(j+1);
+				ingredients[j] = (String) dbVector.elementAt(i).elementAt(j+1);
 			}
 			dish.setIngredients(ingredients);
 			dishes.add(dish);
 		}
-		
+	
 		return dishes.toArray(new Dish[dishes.size()]);
 	}
 }

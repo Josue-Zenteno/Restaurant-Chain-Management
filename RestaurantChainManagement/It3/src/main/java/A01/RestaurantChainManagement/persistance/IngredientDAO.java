@@ -29,10 +29,10 @@ public class IngredientDAO {//Iteration2
 	
 	public void removeIngredients(String[] ingredients) {
 		try {
-			for(int i=0; i<=ingredients.length;i++) {
-				Vector<Vector<Object>> stockVector=Broker.getAgente().leer("SELECT Stock FROM A01dbservice.Ingredients WHERE Name="+ingredients[i]+";");
+			for(int i=0; i<ingredients.length;i++) {
+				Vector<Vector<Object>> stockVector=Broker.getAgente().leer("SELECT Stock FROM A01dbservice.Ingredients WHERE Name = '"+ingredients[i]+"';");
 				int nuevoStock=((Integer) stockVector.elementAt(0).elementAt(0))-1;
-				Broker.getAgente().cambiar("UPDATE A01dbservice.Ingredients SET Stock="+nuevoStock+"WHERE Name=="+ingredients[i]+";");	
+				Broker.getAgente().cambiar("UPDATE A01dbservice.Ingredients SET Stock = "+nuevoStock+" WHERE Name = '"+ingredients[i]+"';");	
 			}
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
@@ -41,8 +41,8 @@ public class IngredientDAO {//Iteration2
 	}
 	public void updateIngredients(String[] ingredients, int[] quantity) {
 		try {
-			for(int i=0; i<=ingredients.length;i++) {
-				Broker.getAgente().cambiar("UPDATE A01dbservice.Ingredients SET Stock="+quantity[i]+"WHERE Name=="+ingredients[i]+";");	
+			for(int i=0; i<ingredients.length;i++) {
+				Broker.getAgente().cambiar("UPDATE A01dbservice.Ingredients SET Stock = "+quantity[i]+" WHERE Name = '"+ingredients[i]+"';");	
 			}
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
