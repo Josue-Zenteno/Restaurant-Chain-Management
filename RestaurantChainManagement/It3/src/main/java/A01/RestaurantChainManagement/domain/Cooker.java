@@ -37,7 +37,8 @@ public class Cooker {
 	public void makeForecast() {//Iteration3
 		Dish d = new Dish();
 		Dish[] dishes = d.getDishes();
-		String[] ingredients = ingredientDAO.readAllIngredientsNames();
+		ingredientDAO.readAllIngredientsNames();
+		String[] ingredients = ingredientDAO.getIngredientsList().toArray(new String[ingredientDAO.getIngredientsList().size()]);
 		int[] quantities =  new int [ingredients.length];
 		Map<String,Integer> correspondency = new HashMap<String,Integer>();
 		for(int i=0;i<ingredients.length;i++)
