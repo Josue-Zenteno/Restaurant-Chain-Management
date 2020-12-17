@@ -40,4 +40,27 @@ public class DishDAO {//Iteration2
 		}
 		return menu;
 	}
+	
+	public Dish[] getDishes() {
+		Vector<Dish> dishes = new Vector<Dish>();
+		Vector<Vector<Object>> dbVector = new Vector<Vector<Object>>();
+		
+		try {			
+			dbVector = Broker.getAgente().leer("SELECT * FROM A01dbservice.Dishes;");
+		}catch(Exception e) {
+			System.err.println(e.getMessage());
+		}
+		
+		for(int i=0; i<dbVector.size(); i++) {
+			Dish dish = new Dish((String)dbVector.elementAt(i).elementAt(0));
+			String[] ingredients = new String[5];
+			for(int j=0; j<ingredients.length; j++) {
+				ingredients[i] = (String) dbVector.elementAt(i).elementAt(j+1);
+			}
+			dish.setIngredients(ingredients);
+			dishes.add(dish);
+		}
+		
+		return dishes.toArray(new Dish[dishes.size()]);
+	}
 }

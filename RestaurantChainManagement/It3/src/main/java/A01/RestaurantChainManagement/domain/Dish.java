@@ -26,6 +26,10 @@ public class Dish {//Iteration2
 		return getDishDAO().getMenu();
 	}
 	
+	public Dish[] getDishes() {
+		return dishDAO.getDishes();
+	}
+	
 	public boolean isValid(String[] availableIng) {
 		boolean valid = false;
 		int counter = 0;
