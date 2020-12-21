@@ -9,7 +9,7 @@ public class RoomHead {
 		Table t = new Table(TableID);
 		t.read();
 		if (t.getState() != 0 && t.getState() != 1) {  		// state 0 = free, state 1 = reserved, state 8 = in preparation
-			return false;																// Which are the states handled by the Room Head
+			return false;															// Which are the states handled by the Room Head
 		} else {
 			int time = r.nextInt(maxStateTime) + 1;  				// As we need to store the time value, we simulate it for every state.
 			System.out.println(time);
