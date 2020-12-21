@@ -20,13 +20,9 @@ class TableTest {
 	void setGetTransactionTest1() {
 		Table t = new Table();
 		Transaction[] tr = new Transaction[9];
-		tr[1].setTime(10);
-		tr[2].setTime(20);
+		tr[1]=new Transaction(10,5);
 		t.setTransactionList(tr);
-		assertAll(
-				() -> assertThrows(NullPointerException.class, ()-> t.setTransactionList(null)),
-				() -> assertEquals(tr, t.getTransactionList())
-				);	
+		assertEquals(tr, t.getTransactionList());	
 	}
 
 	@Test
@@ -65,7 +61,7 @@ class TableTest {
 	void readAllTest() {
 		Table t = new Table();
 		t.readAll();
-		Table[] t2 = new Table[2];
+		Vector<Table> t2 = new Vector<Table>();
 		assertEquals(t2.getClass().getName(),tableDAO.getTableList().getClass().getName());
 		
 	}
@@ -73,13 +69,13 @@ class TableTest {
 	void getAvailableTablesTest() {
 		Table t = new Table();
 		Vector<Table> t2 = new Vector<Table>();
-		assertEquals(t2.getClass().getName(), t.getAvailableTables());
+		assertEquals(t2.getClass().getName(), t.getAvailableTables().getClass().getName());
 	}
 	@Test
 	void checkAvailabilityTest() {
 		Table t = new Table();
 		Vector<Table> t2 = new Vector<Table>();
-		assertEquals(t2.getClass().getName(), t.checkAvailability(t2));
+		assertEquals(t2.getClass().getName(), t.checkAvailability(t2).getClass().getName());
 	}
 	
 	
