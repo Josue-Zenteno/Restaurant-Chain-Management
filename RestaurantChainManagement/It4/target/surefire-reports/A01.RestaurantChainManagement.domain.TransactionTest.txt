@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: A01.RestaurantChainManagement.domain.TransactionTest
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 2.146 sec - in A01.RestaurantChainManagement.domain.TransactionTest
