@@ -18,7 +18,6 @@ public class TransactionDAO {
 			System.err.println(e.getMessage());
 		}
 		return result;
-
 	}
 	
 	public void readAll() {
