@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.5.1" timestamp="2020-12-23T19:15:24.577">
+<file name="E:\Projects\Github\ISOFT2-2021-A01\RestaurantChainManagement\It1\src\main\java\A01\RestaurantChainManagement\domain\Table.java">
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="56" rule="ImportFromSamePackage" ruleset="Import Statements" package="A01.RestaurantChainManagement.domain" externalInfoUrl="https://pmd.github.io/pmd-5.5.1/pmd-java/rules/java/imports.html#ImportFromSamePackage" priority="3">
+No need to import a type that lives in the same package
+</violation>
+</file>
+</pmd>

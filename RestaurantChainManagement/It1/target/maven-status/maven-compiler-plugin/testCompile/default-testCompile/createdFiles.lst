@@ -1,0 +1,7 @@
+A01\RestaurantChainManagement\domain\TableTest.class
+A01\RestaurantChainManagement\persistance\BrokerTest.class
+A01\RestaurantChainManagement\domain\TransactionTest.class
+A01\RestaurantChainManagement\domain\RoomHeadTest.class
+A01\RestaurantChainManagement\persistance\TransactionDAOTest.class
+A01\RestaurantChainManagement\persistance\TableDAOTest.class
+A01\RestaurantChainManagement\presentation\MainMenuTest.class
