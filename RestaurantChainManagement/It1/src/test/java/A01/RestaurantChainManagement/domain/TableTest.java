@@ -69,16 +69,9 @@ public class TableTest {
 	}
 	@Test
 	public void toStringTest() {
-		Table t = new Table(1);
-		t.read();
-		String[] s = t.toString().split(" ");
-		try {
-			Integer.parseInt(s[3]);
-			Integer.parseInt(s[5]);
-			assertTrue("This checks that the returned atributes of the toString are both integers",true);
-		}catch(InputMismatchException e) {
-			fail();
-		}
+		Table t = new Table(1,2,3);
+		assertEquals("Table with ID 1 and 2 chairs available",t.toString());
+
 		
 	}
 	

@@ -33,5 +33,10 @@ public class TransactionTest {
 		tr.setTransactionDAO(transactionDAO);
 		assertEquals(transactionDAO, tr.getTransactionDAO());
 	}
+	@Test
+	public void toStringTest() {
+		Transaction tr = new Transaction(10,1);
+		assertEquals("Transaction in table 1 with time 10",tr.toString());
+	}
 
 }
