@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import java.util.Vector;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import A01.RestaurantChainManagement.domain.Table;
@@ -45,12 +46,14 @@ public class TableDAOTest {
         else
         	fail();
     }
-//    @Test
-//    public void updateTest() {
-//    	Table t = new Table(1);
-//    	tDAO.read(t);
-//    	assertEquals(1, t.update());
-//    }
+    
+    @Ignore
+    @Test
+    public void updateTest() {
+    	Table t = new Table(1);
+    	tDAO.read(t);
+    	//assertEquals(1, t.update());
+    }
 
 	@Test
 	public void testGetBusyTables() {

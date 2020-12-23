@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import java.util.Vector;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import A01.RestaurantChainManagement.persistance.TableDAO;
@@ -109,17 +110,19 @@ public class TableTest {
 		assertEquals(3,WaitingForFoodTables.size());	
 		}	
 
+	@Ignore
 	@Test
 	public void testUpdate() {
-		//assertEquals(1, t.update(); TODO
+		//assertEquals(1, t.update(); 
 	}
 
-//	@Test
-//	public void testSetGetTableDAO() {
-//		TableDAO tdao = new TableDAO();  //TODO
-//		t.setTableDAO(tdao);
-//		assertEquals(tdao, t.getTableDAO());
-//	}
+	@Ignore
+	@Test
+	public void testSetGetTableDAO() {
+		TableDAO tdao = new TableDAO();  
+		t.setTableDAO(tdao);
+		assertEquals(tdao, t.getTableDAO());
+	}
 
 	
 	@Test

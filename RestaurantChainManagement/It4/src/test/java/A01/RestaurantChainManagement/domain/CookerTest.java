@@ -3,6 +3,7 @@ package A01.RestaurantChainManagement.domain;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class CookerTest {
@@ -19,15 +20,17 @@ public class CookerTest {
 		assertEquals("House Burguer", "House Burguer");
 	}
 	
-	/*@Test
+    @Ignore
+	@Test
 	public void prepareMealTest_minus_one () {
 		assertEquals(-1, c.prepareMeal());
 	}
 	
+    @Ignore
 	@Test
 	public void prepareMealTest_zero () {
 		c.setDish(new Dish("House Burguer"));
 		assertEquals(0, c.prepareMeal());
-	}*/
+	}
 
 }
