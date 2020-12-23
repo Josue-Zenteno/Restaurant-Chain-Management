@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="5.5.1" timestamp="2020-12-23T19:16:13.954">
+<pmd version="5.5.1" timestamp="2020-12-23T20:27:51.249">
 <file name="E:\Projects\Github\ISOFT2-2021-A01\RestaurantChainManagement\It4\src\main\java\A01\RestaurantChainManagement\domain\Cooker.java">
 <violation beginline="28" endline="36" begincolumn="41" endcolumn="41" rule="CollapsibleIfStatements" ruleset="Basic" package="A01.RestaurantChainManagement.domain" class="Cooker" method="prepareMeal" externalInfoUrl="https://pmd.github.io/pmd-5.5.1/pmd-java/rules/java/basic.html#CollapsibleIfStatements" priority="3">
 These nested if statements could be combined
