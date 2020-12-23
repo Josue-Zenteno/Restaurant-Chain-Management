@@ -2,32 +2,44 @@ package A01.RestaurantChainManagement.domain;
 
 import static org.junit.Assert.*;
 
-import java.util.InputMismatchException;
-
 import org.junit.Test;
 
-class RoomHeadTest {
-
+public class RoomHeadTest {
+	
 	@Test
-	void advanceStateTest1() {
+	public void advanceStateTest1() {
+		Table t = new Table(1);
+		t.read();
+		int s = t.getState();
 		assertTrue("An id that is going to return false",!RoomHead.advanceState(1, 20));
-
+		t.setState(s);
+		t.update();
+		
 	}
 	@Test
-	void advanceStateTest2() {
+	public void advanceStateTest2() {
+		Table t = new Table(7);
+		t.read();
+		int s = t.getState();
 		assertTrue("An id that is going to return true", RoomHead.advanceState(7, 20));
+		t.setState(s);
+		t.update();
+		
 	}
 	
 	@Test
-	void availableTablesTest() {
+	public void availableTablesTest() {
 		String[] r = RoomHead.availableTables();
 		try {
 			Integer.parseInt(r[2]);
 			Boolean.parseBoolean(r[0]);
 			assertTrue(true);
-		}catch(InputMismatchException e) {
-			
+		} catch (Exception e) {
+			fail();
 		}
+
+		
+
 	}
 
 }

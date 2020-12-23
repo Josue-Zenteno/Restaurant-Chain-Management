@@ -9,19 +9,31 @@ import org.junit.Test;
 
 import A01.RestaurantChainManagement.domain.Transaction;
 
-class TransactionDAOTest {
+public class TransactionDAOTest {
 
     TransactionDAO trDAO;
     @Before
-    void init() {
+    public void init() {
         trDAO = new TransactionDAO();
     }
 
     @Test
-    void getTransactionListTest() {
+    public void setGetReadAllTransactionListTest() {
         trDAO.readAll();
-        Vector<Transaction> trL=new Vector<Transaction>();
-        assertEquals(trL.getClass().getName(), trDAO.getTransactionList().getClass().getName());
+        TransactionDAO trDAO2 = new TransactionDAO();
+        Vector<Transaction> trL = new Vector<Transaction>();
+        trDAO2.setTransactionList(trDAO.getTransactionList());
+        if((trDAO2.getTransactionList() == trDAO.getTransactionList()) && trDAO.getTransactionList().getClass().getName() == trL.getClass().getName())
+        	assertTrue(true);
+        else
+        	fail();
+    }
+    
+    @Test
+    public void insertTest() throws Exception {
+    	Transaction t = new Transaction();
+    	assertEquals("As we can't test this, since this class is changed in iteration 2 and the table is prepared"
+    			+ " for transaction of it2, we check that the insert does not work (returns 0)",0,trDAO.insert(t));
     }
 }
 
