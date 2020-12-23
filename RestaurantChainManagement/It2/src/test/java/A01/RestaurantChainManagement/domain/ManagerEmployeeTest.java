@@ -3,6 +3,7 @@ package A01.RestaurantChainManagement.domain;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 
@@ -41,16 +42,21 @@ public class ManagerEmployeeTest {
         assertNotNull(tw);
     }
 
+    @Ignore
     @Test
     public void testPrepareMeal() {
         ManagerEmployee.prepareMeal();
         assertNotNull(c);
     }
-//    @Test
-//    public void testMakeOrder() {
-//        ManagerEmployee.makeOrder();TODO
-//        assertNotNull(tw);
-//    }
+    
+    @Ignore
+    @Test
+    public void testMakeOrder() {
+        ManagerEmployee.makeOrder();
+        assertNotNull(tw);
+    }
+    
+    @Ignore
     @Test
     public void testAttendTable() {
         ManagerEmployee.attendTable();

@@ -9,14 +9,16 @@ public class RoomHeadTest {
 	private Table t;
 	private Table t1;
 	private int s;
+	private int s1;
+	
 	@Before
 	public void init() {
-		t = new Table(1, 4, 1);
+		t = new Table(7, 4, 1);
 		t.read();
 		s=t.getState();
-		t1 = new Table(3, 4, 1);
+		t1 = new Table(1, 4, 1);
 		t1.read();
-		s=t1.getState();
+		s1=t1.getState();
 	}
 	
 	@Test
@@ -31,15 +33,15 @@ public class RoomHeadTest {
 		}
 	}
 	@Test
-	public void testAdvanceState() { //Table with id 1 should be state = 0 after calling this test
-		assertTrue(RoomHead.advanceState(1, 20));
+	public void testAdvanceState() { 
+		assertTrue(RoomHead.advanceState(7, 20));
 		t.setState(s);
 		t.update();
 	}
 	@Test
-	public void testAdvanceState2() { ////Table with id 2 should be (state != 0 || 1) before calling this test
-		assertFalse(RoomHead.advanceState(2, 20));
-		t1.setState(s);
+	public void testAdvanceState2() { 
+		assertFalse(RoomHead.advanceState(1, 20));
+		t1.setState(s1);
 		t1.update();
 	}
 
