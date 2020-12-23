@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: A01.RestaurantChainManagement.domain.TableWaiterTest
--------------------------------------------------------------------------------
-Tests run: 16, Failures: 0, Errors: 0, Skipped: 5, Time elapsed: 0.555 sec - in A01.RestaurantChainManagement.domain.TableWaiterTest
